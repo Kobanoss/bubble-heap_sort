@@ -1,5 +1,13 @@
 # Задание: Реализация алгоритмов сортировки пузырьком и пирамидальной сортировки.
 
+Программа вызывается из консоли, на выбор дается один из алгоритмов сортировки, кол-во сортируемых элементов и кол-во проходов по таком кол-ву элементов (для повышения точности).
+## Пример работы программы: 
+
+![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/term.png)
+
+    Далее строится график с использованием gnuplot
+
+
 
 ## Алгоритм пузырьковой сортировки:
 
@@ -17,7 +25,51 @@ void BubbleSort(int *arr, int size) {
     }
 }
 ```
-
-![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/term.png)
+Теоретическое значение временной сложности алгоритма: O(n^2)
+На графике мы сравниваем полученные значения с теоретическими.
+## График сравнения:
 ![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/bubble.png)
+
+
+
+## Алгоритм пирамидальной сортировки (сортировки кучей):
+
+``` C
+void heapify(int *arr, int root_id) {
+    int is_completed = 0;
+    int heap_bottom = arr[0];
+
+    while (!(is_completed)) {
+
+        int left = 2 * root_id, right = left + 1, swap_index = root_id;
+
+        if (left <= heap_bottom && arr[left] > arr[swap_index])
+            swap_index = left;
+        if (right <= heap_bottom && arr[right] > arr[swap_index])
+            swap_index = right;
+        if (swap_index == root_id)
+            is_completed = 1;
+        else {
+            swap(&arr[root_id], &arr[swap_index]);
+            root_id = swap_index;
+        }
+    }
+}
+
+void HeapSort(int *arr) {
+    int size = arr[0];
+    for (int i = size / 2; i >= 1; i--)
+        heapify(arr, i);
+
+    while (arr[0] > 1) {
+        swap(&arr[1], &arr[arr[0]]);
+        arr[0]--;
+        heapify(arr, 1);
+    }
+}
+```
+Теоретическое значение временной сложности алгоритма всегда: O(n(log(n))
+На графике мы сравниваем полученные значения с теоретическими.
 ![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/heap.png)
+
+    
