@@ -3,7 +3,7 @@
 Программа вызывается из консоли, на выбор дается один из алгоритмов сортировки, кол-во сортируемых элементов и кол-во проходов по таком кол-ву элементов (для повышения точности).
 ## Пример работы программы: 
 
-![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/term.png)
+![Alt-текст](https://github.com/Kobanoss/bubble-heap_sort/blob/main/term.png)
 
     Далее строится график с использованием gnuplot
 
@@ -28,7 +28,7 @@ void BubbleSort(int *arr, int size) {
 Теоретическое значение временной сложности алгоритма: O(n^2)
 На графике мы сравниваем полученные значения с теоретическими.
 ## График сравнения:
-![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/bubble.png)
+![Alt-текст](https://github.com/Kobanoss/bubble-heap_sort/blob/main/bubble.png)
 
 
 
@@ -70,6 +70,7 @@ void HeapSort(int *arr) {
 ```
 Теоретическое значение временной сложности алгоритма всегда: O(n(log(n))
 На графике мы сравниваем полученные значения с теоретическими.
-![Alt-текст](https://github.com/Kobanoss/FLaTA/blob/master/bubble-heap_sort/heap.png)
+## График сравнения:
+![Alt-текст](https://github.com/Kobanoss/bubble-heap_sort/blob/main/heap.png)
 
     
