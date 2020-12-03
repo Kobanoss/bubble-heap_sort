@@ -26,6 +26,7 @@ void BubbleSort(int *arr, int size) {
 }
 ```
 Теоретическое значение временной сложности алгоритма: O(n^2)
+
 На графике мы сравниваем полученные значения с теоретическими.
 ## График сравнения:
 ![Alt-текст](https://github.com/Kobanoss/bubble-heap_sort/blob/main/bubble.png)
@@ -69,8 +70,7 @@ void HeapSort(int *arr) {
 }
 ```
 Теоретическое значение временной сложности алгоритма всегда: O(n(log(n))
+
 На графике мы сравниваем полученные значения с теоретическими.
 ## График сравнения:
 ![Alt-текст](https://github.com/Kobanoss/bubble-heap_sort/blob/main/heap.png)
-
-    
